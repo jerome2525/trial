@@ -1,0 +1,45 @@
+/* Header
+---------------------------------------- */
+header {
+	background-color: $blue;
+	color: $white;
+	position: relative;
+	.wrap {
+		.title-area {
+			@include span(2);
+			padding: rem(50px 0);
+			@include breakpoint($mobile) {
+				@include full;
+				text-align: center;
+			}
+		}
+		.navigation {
+			@include span(last 10);
+			text-align: right;
+			@include breakpoint($mobile) {
+				display: none;
+			}
+			ul {
+				li {
+					a {
+						&:hover {
+							color: $nativeblack;
+						}
+					}
+				}
+			}
+
+		}
+		#hamburger {
+			position: absolute;
+			right: 2%;
+			top: 5%;
+			font-size: 18px;
+			color: $white;
+			display: none;
+			@include breakpoint($mobile) {
+				display: block;
+			}
+		}
+	}
+}

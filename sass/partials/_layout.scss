@@ -1,0 +1,15 @@
+.wrap {
+	@include container(1170px);
+	@include breakpoint($portrait) {
+		width: container(95%);
+	}
+	@include breakpoint($tablet) {
+		width: container(95%);
+	}
+
+	@include breakpoint($mobile) {
+		width: container(95%);
+		max-width: 400px;
+	}
+
+}

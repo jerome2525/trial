@@ -1,0 +1,25 @@
+/* Navigation
+---------------------------------------- */
+.navigation {
+	text-align: right;
+	display: table;
+	@include breakpoint($mobile) {
+		@include full;
+	}
+	ul {
+		vertical-align: middle;
+		display: table-cell;
+		li {
+			display: inline-block;
+			margin-right: rem(43px);
+			&:last-of-type {
+				margin-right: 0;
+			}
+			a {
+				color: $white;
+				font-family: $font-stack-2;
+				font-size: rem(18px);
+			}
+		}
+	}
+}

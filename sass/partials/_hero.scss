@@ -1,0 +1,48 @@
+.hero {
+	background-color: $blue;
+	color: $white;
+	@include breakpoint($mobile) {
+		margin-bottom: 40px;
+	}
+	.wrap {
+		padding: rem(56px 0 202px 0);
+		@include breakpoint($mobile) {
+			display: flex;
+			flex-direction: column;
+		}
+		h1 {
+			color: $white;
+			margin-bottom: rem(23px);
+		}
+		p {
+			font-size: 15px;
+			line-height: 1.5em;
+			max-width: 508px;
+			&:last-of-type {
+				margin-bottom: rem(56px);
+			}
+		}
+		.left {
+			@include span(6.8);
+			padding: rem(84px 0);
+			@include breakpoint($mobile) {
+				order: 1;
+				padding-bottom: 0; 
+			}
+		}
+		.right {
+			@include span(last 5.2);
+		}
+		.left,
+		.right {
+			@include breakpoint($mobile) {
+				@include full;
+				text-align: center;
+			}
+		}
+
+		.btn {
+			margin-right: rem(13px);
+		}
+	}
+}

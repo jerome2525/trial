@@ -1,0 +1,50 @@
+/* Forms
+---------------------------------------- */
+
+input,
+select,
+textarea {
+	font-size: rem(14px);
+	@include border-radius(3px);
+	padding: rem(10px);
+	background-color: #fff;
+	border: 1px solid $black;
+	color: #333;
+}
+
+input[type='submit'] {
+	cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+	border: 1px solid #999;
+	outline: none;
+}
+
+.btn {
+	font-family: $font-stack-2;
+	font-weight: 400;
+	font-size: rem(15px);
+	background-color: $white;
+	border-radius: 30px;
+	color: $nativeblack;
+	padding: rem(12px 0);
+	max-width: 125px;
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	&:hover {
+		color: $white;
+		background-color: $nativeblack;
+	}
+}
+
+::-moz-placeholder {
+	color: $black-grey;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: $black-grey;
+}

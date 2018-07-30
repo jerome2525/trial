@@ -1,0 +1,218 @@
+.before-footer {
+	background-color: $footerblack;
+	.wrap {
+		padding: rem(80px 0);
+		@include breakpoint($mobile) {
+			text-align: center;
+		}
+		.col {
+			background-color: $white;
+			float: left;
+			padding: rem(48px 50px);
+			h3 {
+				margin-bottom: rem(17px);
+			}
+			p {
+				font-size: 15px;
+				line-height: 1.5em;
+				a {
+					color: inherit;
+					&:hover {
+						color: $lightblue;
+					}
+				}
+				&:last-of-type {
+					margin-bottom: rem(25px);
+				}
+			}
+			span {
+				font-size: 15px;
+				color: $lightblue;
+			}
+
+		}
+
+		.col-small {
+			width: 34.2%;
+    		margin-right: 5.9%;
+    		.info {
+				clear: both;
+				margin-bottom: rem(14px);
+				overflow: hidden;
+				@include breakpoint($mobile) {
+					text-align: left;
+				}
+				.icon {
+					@include span(1);
+					padding-top: 2px;
+				}
+				.text {
+					@include span(last 11);
+				}
+				p {
+					line-height: 1.3em;
+				    margin-bottom: rem(8px);
+				    margin-left: rem(2px);
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
+			.social-media {
+				margin-top: rem(18px);
+				a {
+					width: rem(30px);
+					height: rem(30px);
+					background-color: $lightblue;
+					font-size: rem(20px);
+					display: inline-block;
+					color: $white;
+					border-radius: 3px;
+					margin-right: rem(17px);
+					text-align: center;
+    				padding: rem(5px 0);
+    				&:hover {
+    					background-color: $nativeblack;
+    				}
+				}
+			}
+		}
+
+		.col-big {
+			width: 59.8%;
+    		float: right;
+    		margin-right: 0;
+    		h3 {
+				margin-bottom: rem(23px);
+			}
+    		.contact-form {
+    			.name-email {
+    				margin-bottom: rem(30px);
+    				overflow: hidden;
+    				@include breakpoint($mobile) {
+    					margin-bottom: 0;
+    				}
+    				div {
+    					@include rowMachine(2, 5%);
+    					@include breakpoint($mobile) {
+							@include full;
+							margin-bottom: 20px;
+						}
+	    				input {
+	    					padding: rem(11px 14px);
+	    					border: 1px solid #bbbbbb;
+	    					border-radius: 5px;
+	    					font-size: rem(14px);
+	    					font-family: $font-stack-2;
+	    					@include full;
+	    					margin-bottom: 0;		
+	    				}
+    				}
+    			}
+    			.message {
+					margin-bottom: rem(35px);
+    				overflow: hidden;
+	    			textarea {
+	    				@include full;
+	    				border: 1px solid #bbbbbb;
+	    				border-radius: 5px;
+	    				min-height: rem(142px);
+	    				font-size: rem(14px);
+	    				font-family: $font-stack-2;
+	    				padding: rem(11px 14px);
+	    				resize: none;
+	    			}
+    			}
+
+    			input[type="submit"] {
+    				background-color: $lightblue;
+    				font-size: rem(15px);
+    				color: $white;
+    				font-weight: 400;
+    				border: none;
+    				border-radius: 30px;
+    				padding: rem(11px 11px);
+    				font-family: $font-stack-2;
+    				&:hover {
+    					background-color: $nativeblack;
+    				}
+    			}
+
+    			label.error {
+    				margin-top: 10px;
+    			}
+    		}
+		}
+
+		.col-small,
+		.col-big {
+			@include breakpoint($mobile) {
+				@include full;
+				margin-bottom: 20px;
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		#errorContainer {
+		    display: none;
+		    background-color: #FFDDDD;
+		    border: 1px solid #FF2323;
+		    padding: rem(20px);
+		}
+		 
+		#errorContainer label {
+		    float: none;
+		    width: auto;
+		}
+
+	}
+}
+
+footer {
+	background: #242424;
+	color: $white;
+	.wrap {
+		padding: rem(37px 0);
+		.col {
+			@include rowMachine(2, 5%);
+			@include breakpoint($mobile) {
+				@include full;
+				text-align: center;
+				margin-bottom: 20px
+			}
+			.navigation {
+				text-align: right;
+	    		display: block;
+	    		@include breakpoint($mobile) {
+					text-align: center;
+				}
+				ul {
+					display: block;
+					li {
+						margin-right: rem(21px);
+						&:last-of-type {
+							margin-right: 0;
+						}
+						a {
+							font-size: rem(16px);
+							font-weight: 400;
+							font-family: $font-stack-1;
+							&:hover {
+								color: $lightblue;
+							}
+						}
+					}
+				}
+			}
+			p {
+				margin-bottom: 0;
+				font-size: rem(16px);
+				a {
+					color: $lightblue;
+				}
+			}
+		}
+	}
+}
